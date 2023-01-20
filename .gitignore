@@ -7,3 +7,4 @@ venv
 setting.ini
 pyvenv.cfg
 .env
+__pycashe__
