@@ -42,3 +42,4 @@ async def sql_command_delete(id):
 
 async def sql_commands_get_all_id():
     return cursor.execute('SELECT id FROM anketa').fetchall()
+
