@@ -9,7 +9,6 @@ HEADERS = {
 }
 
 
-
 def get_url(url, params=''):
     req = requests.get(url=url, headers=HEADERS, params=params)
     return req

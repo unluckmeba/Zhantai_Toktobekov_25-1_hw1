@@ -18,7 +18,20 @@ async def mem(message: types.Message):
     await bot.send_photo(message.from_user.id, photo=photo)
 
 
+async def parsser_wheels(message: types.Message):
+    items = parser()
+    for item in items:
+        await bot.send_message(
+            message.from_user.id,
+
+            f"{item['link']}"
+            f"{item['logo']}\n"
+            f"# {item['size']}\n"
+            f"цена - {item['price']}\n"
+        )
+
+
 def register_handlers_client(dp: Dispatcher):
     dp.register_message_handler(game_message, commands=['game'])
     dp.register_message_handler(mem, commands=['mem'])
-
+    dp.register_message_handler(parsser_wheels, commands=["wheel"])
